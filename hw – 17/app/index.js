@@ -14,6 +14,7 @@ function enterUserNumber () {
 
         if (!isNaN(comparingNumber) && comparingNumber > 100) {
             console.log("You enter the number bigger than 100: ", + comparingNumber);
+            return;
         } else {
             console.log("You entered the wrong number. Try again!");
         }
