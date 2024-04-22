@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table id="tablePifagor"></table>
+    <script>
+        let table = document.getElementById("tablePifagor");
+        let tr = document.createElement("tr");
+        let th = document.createElement("th");
+
+        th.textContent = " ";
+        tr.appendChild(th);
+
+        for (let i = 1; i <=10; i++) {
+            th = document.createElement("th");
+            th.textContent = i;
+            tr.appendChild(th);
+        }
+        table.appendChild(tr);
+
+        for (let i = 1; i<= 10; i++) {
+            let tr = document.createElement("tr");
+            let td = document.createElement("td");
+            td.textContent = i;
+            tr.appendChild(td);
+
+            for (j = 1; j <= 10; j++) {
+                td = document.createElement("td");
+                td.textContent = i * j;
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+    </script>
+</body>
+</html>
